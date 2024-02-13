@@ -1,0 +1,24 @@
+// Conocimientos Previos //
+
+/* fun = Palabra Reservada para Funciones 
+ * var = Palabra Reservada para Variables
+ * val = Palabra Reservada para Valores Constantes
+ * 
+*/
+
+fun main() {
+    
+    var EdadMascota = 7
+    val Nombre_Mascota= "Lanna"
+    
+    
+    println("$Nombre_Mascota Tiene: $EdadMascota Años")
+    println("Este año cumplirá: ${EdadMascota+1} Años")
+    
+    
+    val Pi = 3.1416
+    val e = 2.71
+    
+    println ("El valor de Pi siempre será $Pi y el de e siempre será $e ")
+    
+}
