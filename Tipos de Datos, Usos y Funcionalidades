@@ -1,0 +1,130 @@
+/* Tipo de Datos, Usos y Funcionalidades Básicas 
+
+ Tipos de Datos: Númericos y Caracteres
+
+ NÚMERICOS: 
+
+   - Float     64 bits de ancho
+   - Double    32 bits de ancho
+   - Long      64 bits de ancho
+   - Int       32 bits de ancho
+   - Short     16 bits de ancho
+   - Byte       8 bits de ancho
+
+ CARACTER: 
+
+ Character, String, Array, Boolean */
+
+ // CÓDIGO DE APLICACIÓN // 
+
+ fun main() {
+
+    /* 
+     Asignación Explícita de una variable
+     (Se puede hacer con cualquier tipo de variable) 
+    
+    */
+    
+    var Caractercualquiera: Char = 'a'
+    
+    /* Recordar utilizar solo una comilla para tipos caracter, 
+       porque la comilla doble es considerado como String */
+    
+    /* De igual manera solo es necesario si se asigna de forma explícita
+       Por lo general, se asigna de forma implícita y el programa asume 
+       que tipo de variable es  */
+    
+    println(Caractercualquiera)
+    
+    var StringCualquiera: String = "Hola, ¿Cómo Vas?"
+    println(StringCualquiera)
+    
+    
+    /* Se va a transformar una variable tipo String ó Character, a una tipo Int,
+     * por medio de la Funcionalidad "toInt" */
+     
+    fun transformar(a: Char, b: String): Int {
+        val aInt: Int = a.toInt()
+        val bInt: Int = b.toInt()
+        return aInt + bInt
+    }
+
+   /* Esta función no es necesaria para aplicar la funcionalidad "toInt"
+    * Solo fue una idea que surgió mientras se realizaba el código, pero ahí está como se debe aplicar la funcionalidad
+    * a una variable */
+    
+    
+    val ejemploChar: Char = '8'
+    val ejemploString: String = "9"
+
+    println("$ejemploChar $ejemploString")
+
+    val enterosResultado = transformar(ejemploChar, ejemploString)
+
+    println("La suma transformada es: $enterosResultado")
+
+/* El valor dado debería ser 65, ya qué, el caracter "8" es equivalente a 56 en números enteros
+ pero la String "9" es 9, por lo tanto 56+9= 65, sin embargo, si quisieramos que nos de 17,
+simplemente en la función debemos restarle 48 al "toInt" del 8, ya que en la conversión caracteres van desfasados en 48 posiciones. 
+PDT: Recordar mirar la tabla de Caracteres, Decimales, Hexadecimales para entender todo esto */
+   
+     fun transformar2(a: Char, b: String): Int {
+        val aInt: Int = a.toInt()
+        val bInt: Int = b.toInt()
+        return (aInt-48) + bInt
+    }
+     
+    val ejemploChar2: Char = '8'
+    val ejemploString2: String = "9"
+
+    println("$ejemploChar2 $ejemploString2")
+
+    val enterosResultado2 = transformar2(ejemploChar2, ejemploString2)
+
+    println("La suma transformada es: $enterosResultado2")
+    
+    
+ /* Así nos da 17 */ 
+ 
+ /*Trabajo con Strings */
+ 
+ var Str:String = "Samuel"
+ 
+ println(Str)
+ 
+ /* Al ser cadenas de caracteres, yo puedo acceder a cualquier elemento de la String */
+ 
+ println(Str [0])
+ println(Str [1])
+ println("Etc.....")
+
+
+
+
+
+
+/* Tipos de Datos String: String con Secuencia de Escape y Raw Strings (puros)  */
+var Str:String2 = "Samuel \n Valencia"
+
+/* Este es un String con una secuencia de escape de salto de línea, hay varias secuencias más */
+ /*De momento solo he descubierto \n , \t , \\ */
+ println(Str2)
+
+var Str:String3 = “”"Samuel
+		 Valencia"””
+println(Str3)
+/* Este es un String Puro (Raw String) Que se indica con triple comilla doble, y toma literalmente todo lo expresado dentro de el. Espacios, tabulaciones, etc… */
+/* Los Datos tipo String tienen sus propiedades únicas, por ejemplo el .length cuando queramos saber cual es la longitud de la cadena ó para unir 2 strings simplemente los sumamos */
+
+var String1: String = “Samuel” 
+var String2: String = “ Valencia”
+
+println(String1 + String2) 
+var String11:String= "Samuel"
+ var String22:String= " Valencia"
+ 
+ println ("Hola, mi nombre es: $String11$String22") 
+/* Así Podemos concatenar una String ya definida dentro de otra, para que hagan parte de una sola */
+/* Si quisiera acceder a la propiedad .length, se debe seguir la siguiente estructura: */
+println ("Hola, mi nombre es: $String11$String22. Mi apellido tiene ${String22.length} caracteres")
+}
